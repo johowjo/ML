@@ -5,11 +5,14 @@
 - [TA's slide](https://speech.ee.ntu.edu.tw/~hylee/ml/ml2025-course-data/hw8.pdf)
 ### How to run
 1. All the code in the section **Environment setup** has to be run
-2. In **Predefined Function**, all the code under **Util Function** has to be run
-3. For the method you hope to use, run the corresponding section unnder **Predefined Function** (e.g. If you hope to use MEMIT, run all the code in the **MEMIT** section under **Predefined Function**)
-4. Alternatively, you can simply run all the code in **Predefined Function**, as the execution is fast.
-5. In **Main Process**, all the code under **Getting the model** has to be run
-6. If you hope to do single editing, run the code under **Single Editing**, to switch between methods (FT and ROME), there is a cell 
+2. In the section **Predefined Function**, all the code under **Util Function** has to be run
+3. For the method you hope to use, run the corresponding section under **Predefined Function** (e.g. If you hope to use MEMIT, run all the code in the **MEMIT** section under **Predefined Function**)
+
+> [!WARNING]  
+> **DO NOT** run the code for one method and then execute another editing method, otherwise the redefinition of the function `get_context_templates` will cause an error. For example, if you hope to you MEMIT, you must first run the code in `Predefined Function -> MEMIT` before executing the main process, and you **MUST NOT** overwrite function definitions by running the code in `Predefined Function -> ROME` after running `Predefined Function -> MEMIT`.
+
+4. In **Main Process**, all the code under **Getting the model** has to be run
+5. If you hope to do single editing, run the code under **Single Editing**, to switch between methods (FT and ROME), there is a cell 
 ``` Python
 try:
     with torch.no_grad():
@@ -31,7 +34,7 @@ print(hparams)
 ```
 assign the variables `RewritingParamsCalss`, `apply_method`, `hparam` accordingly (just uncomment the line you want and comment out the other)
 
-7. If you hope to do multiple  editing, run the code under **Multiple Editing**, to switch between methods, there is a cell
+6. If you hope to do multiple  editing, run the code under **Multiple Editing**, to switch between methods, there is a cell
 ```Python
 try:
     with torch.no_grad():
@@ -54,6 +57,9 @@ hparams = RewritingParamsClass(**hparam)
 print(hparams)
 ```
 assign the variables `RewritingParamsCalss`, `apply_method`, `hparam` accordingly (just uncomment the line you want and comment out the others)
+
+
+
 If you hope to change the data amount, there is a cell
 ```Python
 import json
