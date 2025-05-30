@@ -6,8 +6,10 @@
 ### How to run
 1. All the code in the section **Environment setup** has to be run
 2. In the section **Predefined Function**, all the code under **Util Function** has to be run
-3. For the method you hope to use, run the corresponding section under **Predefined Function** (e.g. If you hope to use MEMIT, run all the code in the **MEMIT** section under **Predefined Function**) ***It is recommended that you just run the entire Predefined Function section.***
+3. For the method you hope to use, run the corresponding section under **Predefined Function** (e.g. If you hope to use MEMIT, run all the code in the **MEMIT function** section under **Predefined Function**)
 
+> [!WARNING]  
+> **DO NOT** run the code for one method and then execute another editing method, otherwise the redefinition of the function `get_context_templates` will cause an error. For example, if you hope to use MEMIT, you must first run the code in `Predefined Function -> MEMIT function` before executing the main process, and you **MUST NOT** overwrite function definitions by running the code in `Predefined Function -> ROME Function` or `Predefined Function -> Fine-Tuning Function` after running `Predefined Function -> MEMIT`.
 
 4. In **Main Process**, all the code under **Getting the model** has to be run
 5. If you hope to do single editing, run the code under **Single Editing**, to switch between methods (FT and ROME), there is a cell 
