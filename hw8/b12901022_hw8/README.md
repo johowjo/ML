@@ -6,6 +6,7 @@
 ### How to run
 1. All the code in the section **Environment setup** has to be run
 2. In the section **Predefined Function**, all the code under **Util Function** has to be run
+<<<<<<< HEAD
 3. For the method you hope to use, run the corresponding section under **Predefined Function** (e.g. If you hope to use MEMIT, run all the code in the **MEMIT function** section under **Predefined Function**)
 
 > [!WARNING]  
